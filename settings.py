@@ -44,6 +44,10 @@ AUTH_LDAP_USER_FLAGS_BY_GROUP = {
 # This is the default, but I like to be explicit
 AUTH_LDAP_ALWAYS_UPDATE_USER = True
 
+# Cache group memberships for an hour to minimize LDAP traffic
+AUTH_LDAP_CACHE_GROUPS = True
+AUTH_LDAP_GROUP_CACHE_TIMEOUT = 3600
+
 AUTHENTICATION_BACKENDS = (
     'django_auth_ldap.backend.LDAPBackend',
     'django.contrib.auth.backends.ModelBackend',

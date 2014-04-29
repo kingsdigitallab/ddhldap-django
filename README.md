@@ -11,7 +11,7 @@ authentication, so it is possible to have local Django accounts.
 - Add the setting `LDAP_GROUP` to your project and set it to the LDAP group you
   want to authenticate to, for example `LDAP_GROUP = 'histpag'`.
 - Import the ddhldap_django settings into your project. These settings need to
-  be imported after any other settings you might already be importing: `from ddhldap-django.settings import *`.
+  be imported after any other settings you might already be importing: `from ddhldap_django.settings import *`.
 - Add ddhldap_django signal handler into your project urls:
     
         from ddhldap.signal_handlers import register_signal_handlers as \

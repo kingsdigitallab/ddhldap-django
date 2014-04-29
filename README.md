@@ -18,5 +18,10 @@ authentication, so it is possible to have local Django accounts.
             ddhldap_register_sigal_hadlers
         ddhldap_register_signal_handlers()
 
+## System requirements
+
+The python/django LDAP libraries depend on the libldap-dev and libsasl-dev system
+libraries.
+
 [django-auth-ldap]: http://pythonhosted.org/django-auth-ldap/
 [requirements]: requirements.txt

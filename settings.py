@@ -2,12 +2,10 @@
 # http://pythonhosted.org/django-auth-ldap/
 #------------------------------------------------------------------------------
 
-from django.conf import settings as s
 from django_auth_ldap.config import LDAPSearch, PosixGroupType
 
 import ldap
 
-LDAP_GROUP = 'cn=' + s.LDAP_GROUP
 LDAP_BASE_DC = 'dc=dighum,dc=kcl,dc=ac,dc=uk'
 LDAP_BASE_OU = 'ou=groups,' + LDAP_BASE_DC
 
@@ -26,7 +24,8 @@ AUTH_LDAP_GROUP_SEARCH = LDAPSearch(
 AUTH_LDAP_GROUP_TYPE = PosixGroupType(name_attr='cn')
 
 # Simple group restrictions
-AUTH_LDAP_REQUIRE_GROUP = LDAP_GROUP + ',' + LDAP_BASE_OU
+# TODO: Set this value in the project settings
+AUTH_LDAP_REQUIRE_GROUP = ''
 
 # Populate the Django user from the LDAP directory
 AUTH_LDAP_USER_ATTR_MAP = {

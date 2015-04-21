@@ -40,6 +40,8 @@ AUTH_LDAP_USER_FLAGS_BY_GROUP = {
     'is_superuser': 'cn=sysadmin,' + LDAP_BASE_OU
 }
 
+AUTH_LDAP_PROFILE_FLAGS_BY_GROUP = {}
+
 # This is the default, but I like to be explicit
 AUTH_LDAP_ALWAYS_UPDATE_USER = True
 
